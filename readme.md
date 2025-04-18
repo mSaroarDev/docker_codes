@@ -86,6 +86,9 @@ docker image prune -a
 docker run -p 3001:3001 --name docker_test_run --rm -v "C:\Users\Saroar _\Documents\test-docker:/app" -v "/app/node_modules" node_test
 ```
 > -p: port
-> --name: custome name that I want to set the run
+>
+> --name: custom name that I want to set the run
+>
 > --rm: remove the run when container or image stop
+>
 > -v: volume bind (host-machine : work-dir)

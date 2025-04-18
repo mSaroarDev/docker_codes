@@ -4,7 +4,7 @@ const app = express();
 
 
 app.get("/", (req, res) => {
-    res.status(200).json("Hello Javascript --> Hello,js");
+    res.status(200).json("Hello Developer!");
 });
 
 app.listen(3001, () => {

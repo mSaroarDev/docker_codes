@@ -19,7 +19,10 @@ docker ps -a
 docker images
 ```
 
-### 
+### Create an image with tagname
+``` bash
+docker build -t <name-here>:<tagname>
+```
 
 
 ### run a container with volume to get instant update on change

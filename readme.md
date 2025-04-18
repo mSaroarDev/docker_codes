@@ -85,6 +85,13 @@ docker image prune -a
 ```bash 
 docker run -p 3001:3001 --name docker_test_run --rm -v "C:\Users\Saroar _\Documents\test-docker:/app" -v "/app/node_modules" node_test
 ```
+
+
+### simplify pathname volume to get instant update on change
+```bash 
+docker run -p 3001:3001 --name docker_test_run --rm -v "//$(pwd)"//app -v "//app/node_modules" node_test
+```
+
 > -p: port
 >
 > --name: custom name that I want to set the run

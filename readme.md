@@ -43,9 +43,49 @@ docker run -p <host-machine-port>:<desired-port> <image-name>
 eg: docker run -p 3001:5000
 then hit the http://localhost:5000 in browser
 
+## Stop container
+``` bash
+docker stop <container-id>
+```
+
+## Remove docker container
+``` bash
+docker rm CONTAINER_NAME_OR_ID
+```
+
+## Remove and delete one line code
+``` bash
+docker rm -f my-container
+```
+
+
+## Force remove (useful if the image is in use by a stopped container):
+``` bash
+docker rm -f my-container
+```
+
+## Remove image
+``` bash
+docker rmi IMAGE_NAME_OR_ID
+```
+
+## Remove all unused images (dangling + untagged):
+``` bash
+docker image prune
+```
+
+## Remove all images
+``` bash
+docker image prune -a
+```
+
 
 ### run a container with volume to get instant update on change
 
 ```bash 
 docker run -p 3001:3001 --name docker_test_run --rm -v "C:\Users\Saroar _\Documents\test-docker:/app" -v "/app/node_modules" node_test
 ```
+> -p: port
+> --name: custome name that I want to set the run
+> --rm: remove the run when container or image stop
+> -v: volume bind (host-machine : work-dir)

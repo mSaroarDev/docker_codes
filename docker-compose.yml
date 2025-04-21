@@ -1,0 +1,11 @@
+version: '3.9'
+
+services:
+  server: 
+    build: .
+    container_name: docker_server
+    ports: 
+      - 8001:8000
+    volumes: 
+      - .:/app
+      - /app/node_modules

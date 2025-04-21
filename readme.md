@@ -38,10 +38,10 @@ docker run <image-name>
 
 ## Run container with exposed port
 ``` bash
-docker run -p <host-machine-port>:<desired-port> <image-name>
+docker run -p <desired-port>:<host-machine-port> <image-name>
 ```
 eg: docker run -p 3001:5000
-then hit the http://localhost:5000 in browser
+then hit the http://localhost:3001 in browser
 
 ## Stop container
 ``` bash
@@ -58,6 +58,11 @@ docker rm CONTAINER_NAME_OR_ID
 docker rm -f my-container
 ```
 
+## Remove all docker containers 
+``` bash
+docker container prune
+```
+
 
 ## Force remove (useful if the image is in use by a stopped container):
 ``` bash
@@ -68,6 +73,8 @@ docker rm -f my-container
 ``` bash
 docker rmi IMAGE_NAME_OR_ID
 ```
+
+
 
 ## Remove all unused images (dangling + untagged):
 ``` bash
